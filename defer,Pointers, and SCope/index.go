@@ -46,6 +46,24 @@ func main() {
 	hello()
 	fmt.Println(PS)
 	// fmt.Println(greet.Greeting)
+
+	//POINTErs
+	pointEr := 6
+	var p *int = &pointEr
+	fmt.Println("====================================")
+	fmt.Println("Value of pointEr:", pointEr)
+	fmt.Println("Address of pointEr:", &pointEr)
+	fmt.Println("Pointer p:", p)
+	fmt.Println("Value at pointer p:", *p) // dereferencing
+
+	//example 2
+	a := 10
+	var pointertoa *int = &a
+	fmt.Println("====================================")
+	fmt.Println("Value of a:", a)
+	fmt.Println("Address of a:", &a)
+	fmt.Println("Pointer pointertoa:", pointertoa)
+	fmt.Println("Value at pointertoa:", *pointertoa)
 }
 
 // defer is a keyword used to postpone the execution of a function until the surrounding function returns.
@@ -62,3 +80,7 @@ func main() {
 // 5. Global Scope (Across Packages)
 // If a variable, constant, or function name starts with an uppercase letter,
 //  it is exported and can be accessed from other packages (similar to public in other languages).
+
+//Pointers in GO
+//A pointer is a variable that stores the memory address of another variable.
+// pointers allow you to reference and manipulate memory addresses
